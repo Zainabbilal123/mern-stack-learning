@@ -6,6 +6,13 @@
 - Installed and used npm packages
 -  Understood package.json and node_module
 
+
+### Modules
+- Modules help organize code into reusable pieces
+- CommonJS uses `require()` and `module.exports`
+- ES Modules use `import` and `export`
+- Both are important to know
+
 ### CommonJS Module (math.js)
 ```javascript
 function add(a,b) {
@@ -74,11 +81,7 @@ if (success) {
 }
 
 
-// ### Modules
-// - Modules help organize code into reusable pieces
-// - CommonJS uses `require()` and `module.exports`
-// - ES Modules use `import` and `export`
-// - Both are important to know
+
 
 
 
