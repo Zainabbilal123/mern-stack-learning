@@ -1,4 +1,4 @@
-// api-example.js
+
 import fetch from 'node-fetch';
 
 async function getPost() {
