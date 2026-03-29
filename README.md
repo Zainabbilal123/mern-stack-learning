@@ -3,7 +3,7 @@
 [![Node.js](https://img.shields.io/badge/Node.js-20.x-green)](https://nodejs.org/)
 
 ## Documentation
-- [Week 1: week1-nodejs-foundation](./week1-nodejs-foundation/docs/)
+- [Week 1: doucmentation](./week1-nodejs-foundation/docs/)
 
 
 ## Quick Start
