@@ -1,13 +1,10 @@
-// notes.js - CLI Note Saver Tool
+
 const fs = require('fs').promises;
 const path = require('path');
 
-// File where notes are stored
+
 const NOTES_FILE = path.join(__dirname, 'notes.json');
 
-// ============================================
-// HELPER FUNCTIONS
-// ============================================
 
 // Create file if it doesn't exist
 async function ensureFile() {
@@ -20,23 +17,21 @@ async function ensureFile() {
     }
 }
 
-// Read all notes from file
+
 async function readNotes() {
     await ensureFile();
     const data = await fs.readFile(NOTES_FILE, 'utf8');
     return JSON.parse(data);
 }
 
-// Write notes to file
+
 async function writeNotes(notes) {
     await fs.writeFile(NOTES_FILE, JSON.stringify(notes, null, 2));
 }
 
-// ============================================
-// MAIN FUNCTIONS
-// ============================================
 
-// Add a new note
+
+
 async function addNote(text) {
     try {
         const notes = await readNotes();
@@ -59,7 +54,7 @@ async function addNote(text) {
     }
 }
 
-// List all notes
+
 async function listNotes() {
     try {
         const notes = await readNotes();
@@ -88,7 +83,7 @@ async function listNotes() {
     }
 }
 
-// Delete a note by ID
+
 async function deleteNote(id) {
     try {
         const notes = await readNotes();
@@ -152,9 +147,7 @@ EXAMPLES:
 `);
 }
 
-// ============================================
-// MAIN - Handle Command Line Arguments
-// ============================================
+
 
 async function main() {
     const command = process.argv[2];
@@ -204,5 +197,5 @@ async function main() {
     }
 }
 
-// Run the app
+
 main();
