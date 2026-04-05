@@ -19,10 +19,5 @@ WHAT I LEARNED:
 - AppError class keeps errors consistent
 - Use next(error) to send errors to handler
 
-TESTING:
-✅ /invalid → 404 "Route not found"
-✅ /users/999 → 404 "User not found"
-✅ /users/abc → 400 "Invalid ID format"
-✅ POST without body → 400 "Name required"
 
 ALL ROUTES WORKING WITH ERROR HANDLING!
