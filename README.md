@@ -4,6 +4,7 @@
 
 ## Documentation
 - [Week 1: doucmentation](./week1-nodejs-foundation/docs/)
+-[week 2: doucmentation](./week2-express/docs/)
 
 
 ## Quick Start
