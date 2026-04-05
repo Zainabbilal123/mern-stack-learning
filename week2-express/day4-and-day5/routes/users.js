@@ -1,4 +1,4 @@
-// routes/users.js
+
 const express = require('express');
 const router = express.Router();
 const {
@@ -7,13 +7,17 @@ const {
     createUser,
     updateUser,
     deleteUser
-} = require('../controllers/usercontroller');
+} = require('../controllers/userController');
+const { requireJson, validateUser } = require('../middleware/validation');
 
-// All routes start with /users
 router.get('/', getUsers);
+
 router.get('/:id', getUserById);
-router.post('/', createUser);
-router.put('/:id', updateUser);
+
+router.post('/', requireJson, validateUser, createUser);
+
+router.put('/:id', requireJson, updateUser);
+
 router.delete('/:id', deleteUser);
 
 module.exports = router;

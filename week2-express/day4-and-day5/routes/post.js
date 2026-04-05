@@ -1,14 +1,20 @@
-// routes/posts.js
+
 const express = require('express');
 const router = express.Router();
 const {
     getPosts,
     getPostById,
-    createPost
-} = require('../controllers/postcontroller');
+    createPost,
+    deletePost
+} = require('../controllers/postController');
+const { requireJson } = require('../middleware/validation');
 
 router.get('/', getPosts);
+
 router.get('/:id', getPostById);
-router.post('/', createPost);
+
+router.post('/', requireJson, createPost);
+
+router.delete('/:id', deletePost);
 
 module.exports = router;
