@@ -7,10 +7,10 @@
 - Added query string ?role=admin for filtering
 
 # ROUTES MADE:
-GET    /users/:id      - Get one user
-PUT    /users/:id      - Update user
-DELETE /users/:id      - Delete user
-GET    /users?role=admin - Filter users
+- GET    /users/:id      - Get one user
+- PUT    /users/:id      - Update user
+- DELETE /users/:id      - Delete user
+- GET    /users?role=admin - Filter users
 
 # WHAT I LEARNED:
 - req.params gets :id from URL
@@ -19,7 +19,3 @@ GET    /users?role=admin - Filter users
 - Return 404 if user not found
 - Return 400 if ID is invalid
 
-# TESTING:
- users/1     → User found
- users/99    → 404 not found
-users/abc   → 400 invalid ID

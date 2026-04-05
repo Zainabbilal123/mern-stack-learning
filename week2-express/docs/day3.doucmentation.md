@@ -22,6 +22,6 @@ npm install morgan cors
 - Custom middleware can validate requests
 
 # TESTING:
- Morgan logs every request in terminal
- CORS allows frontend to access API
- requireJson blocks wrong content-type
+ - Morgan logs every request in terminal
+ - CORS allows frontend to access API
+ - requireJson blocks wrong content-type

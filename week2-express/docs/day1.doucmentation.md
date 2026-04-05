@@ -8,13 +8,13 @@
 - Tested with Thunder Client
 
 # COMMANDS USED:
-npm init -y
-npm install express
-node server.js
+- npm init -y
+- npm install express
+- node server.js
 
 # ROUTES MADE:
-GET  /users     - Returns list of users
-POST /users     - Creates new user
+- GET  /users     - Returns list of users
+- POST /users     - Creates new user
 
 # WHAT I LEARNED:
 - Express makes HTTP server easy
