@@ -5,12 +5,10 @@
 ## Documentation
 - [Week 1: doucmentation](./week1-nodejs-foundation/docs/)
 - [week 2: doucmentation](./week2-express/docs/)
+- [week3 : doucmentation](./week3-moongodb/docs/)
 
 
-## Quick Start
-```bash
 
 
-# Navigate to week 1
-cd week1-nodejs-foundations
+
 
