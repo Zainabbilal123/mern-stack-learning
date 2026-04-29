@@ -1,17 +1,11 @@
-DAY 2: JWT - Issue & Verify
+# DAY 2: JWT - Issue & Verify
 
-WHAT I DID:
+# WHAT I DID:
 - Installed jsonwebtoken
 - Added JWT_SECRET to .env
 - Created signToken and verifyToken
 - Returns token on login/register
 
-JWT STRUCTURE:
-Header.Payload.Signature
-
-SECURITY:
+# SECURITY:
 - Payload is NOT encrypted
 - Never put sensitive data in JWT
-- Short expiry (15m)
-
-TESTED: Token issued and verified at jwt.io

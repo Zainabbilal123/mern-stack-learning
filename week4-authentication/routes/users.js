@@ -7,7 +7,7 @@ const AppError = require('../utils/appError');
 
 router.use(protect);
 
-// Get all users (admin only)
+
 router.get('/', authorise('admin'), async (req, res, next) => {
     try {
         const users = await User.find().select('-password');
@@ -21,7 +21,7 @@ router.get('/', authorise('admin'), async (req, res, next) => {
     }
 });
 
-// Get single user
+
 router.get('/:id', async (req, res, next) => {
     try {
         const user = await User.findById(req.params.id).select('-password');
@@ -39,7 +39,7 @@ router.get('/:id', async (req, res, next) => {
     }
 });
 
-// Update user (own profile only)
+
 router.put('/:id', async (req, res, next) => {
     try {
         if (req.user.id !== req.params.id && req.user.role !== 'admin') {
@@ -65,7 +65,6 @@ router.put('/:id', async (req, res, next) => {
     }
 });
 
-// Delete user (admin only)
 router.delete('/:id', authorise('admin'), async (req, res, next) => {
     try {
         const user = await User.findByIdAndDelete(req.params.id);

@@ -31,13 +31,34 @@ const issueTokens = async (user, res) => {
     
     return accessToken;
 };
-
 exports.register = async (req, res, next) => {
     try {
+        console.log('Register - Full body:', req.body);
+        
         const { name, email, password } = req.body;
         
-        const hashedPassword = await bcrypt.hash(password, 12);
+        // Validation
+        if (!name) {
+            return next(new AppError('Name is required', 400));
+        }
+        if (!email) {
+            return next(new AppError('Email is required', 400));
+        }
+        if (!password) {
+            return next(new AppError('Password is required', 400));
+        }
+        if (password.length < 8) {
+            return next(new AppError('Password must be at least 8 characters', 400));
+        }
         
+        console.log('Password received:', password);
+        console.log('Password length:', password.length);
+        
+        // Hash password
+        const hashedPassword = await bcrypt.hash(password, 12);
+        console.log('Password hashed successfully');
+        
+        // Create user
         const user = await User.create({
             name,
             email,
@@ -57,9 +78,11 @@ exports.register = async (req, res, next) => {
             data: { user }
         });
     } catch (error) {
+        console.log('Register error:', error);
         next(error);
     }
 };
+        
 
 exports.login = async (req, res, next) => {
     try {

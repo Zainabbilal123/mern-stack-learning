@@ -31,15 +31,7 @@ app.get('/', (req, res) => {
         }
     });
 });
-// TEST ROUTE - Add this temporarily
-app.post('/test', (req, res) => {
-    console.log('Headers:', req.headers);
-    console.log('Body:', req.body);
-    res.json({ 
-        message: 'Test route working', 
-        bodyReceived: req.body 
-    });
-});
+
 
 app.use('/auth', authRouter);
 app.use('/users', usersRouter);

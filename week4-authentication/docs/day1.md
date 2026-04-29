@@ -1,16 +1,15 @@
-DAY 1: Password Hashing with bcrypt
+# DAY 1: Password Hashing with bcrypt
 
-WHAT I DID:
+# WHAT I DID:
 - Installed bcrypt
 - Added password field to User model
 - Created register and login
 - Hashed passwords before saving
 
-KEY LEARNINGS:
+# KEY LEARNINGS:
 - Never store plain passwords
 - bcrypt.hash(password, 12)
 - bcrypt.compare(password, hash)
 - Same error for wrong email/password
 - select: false hides password
 
-TESTED: Register and login working

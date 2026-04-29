@@ -1,16 +1,14 @@
-DAY 3: Auth Middleware & Route Protection
+# DAY 3: Auth Middleware & Route Protection
 
-WHAT I DID:
+# WHAT I DID:
 - Created protect middleware
 - Reads Bearer token from header
 - Verifies token and attaches user
 - Protected /users and /posts routes
 
-MIDDLEWARE STEPS:
+# MIDDLEWARE STEPS:
 1. Get token from Authorization header
 2. Verify token signature
 3. Check user exists in DB
 4. Attach user to req.user
 5. Call next()
-
-TESTED: No token → 401, Valid token → 200
