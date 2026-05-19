@@ -2,11 +2,14 @@
 
 [![Node.js](https://img.shields.io/badge/Node.js-20.x-green)](https://nodejs.org/)
 
-## Documentation
+# Documentation
 - [Week 1: doucmentation](./week1-nodejs-foundation/docs/)
 - [week 2: doucmentation](./week2-express/docs/)
 - [week3 : doucmentation](./week3-moongodb/docs/)
 - [week4 : doucmentation](./week4-authentication/docs/)
+- [week5 :doucmentataion](./week5-react/docs/)
+- [week6 :doucmentataion](./week6-blog/docs/)
+
 
 
 
