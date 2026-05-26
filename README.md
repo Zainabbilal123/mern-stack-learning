@@ -9,6 +9,7 @@
 - [week4 : doucmentation](./week4-authentication/docs/)
 - [week5 :doucmentataion](./week5-react/docs/)
 - [week6 :doucmentataion](./week6-blog/docs/)
+- [week7 :doucmentataion](./week-polish/docs/)
 
 
 
