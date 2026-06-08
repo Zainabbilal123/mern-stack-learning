@@ -9,6 +9,9 @@
     "test": "jest --detectOpenHandles",
     "test:watch": "jest --watch"
   },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "jest": {
     "testEnvironment": "node",
     "setupFilesAfterEnv": ["./tests/setup.js"]
